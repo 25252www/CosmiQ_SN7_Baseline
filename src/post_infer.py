@@ -28,6 +28,8 @@ import solaris as sol
 from solaris.utils.core import _check_gdf_load
 from solaris.raster.image import create_multiband_geotiff 
 
+# 按AOI copy一份mask图像
+
 # import from data_postproc_funcs
 module_path = os.path.abspath(os.path.join('../src/'))
 if module_path not in sys.path:

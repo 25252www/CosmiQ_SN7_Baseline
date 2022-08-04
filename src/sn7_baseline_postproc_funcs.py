@@ -298,6 +298,7 @@ def sn7_convert_geojsons_to_csv(json_dirs, output_csv_path, population='proposal
     
     first_file = True  # switch that will be turned off once we process the first file
     for json_dir in tqdm.tqdm(json_dirs):
+        print('json_dir', json_dir)
         json_files = sorted(glob.glob(os.path.join(json_dir, '*.geojson')))
         for json_file in tqdm.tqdm(json_files):
             try:
@@ -308,7 +309,8 @@ def sn7_convert_geojsons_to_csv(json_dirs, output_csv_path, population='proposal
                 continue
                 #raise Exception(message)
             if population == 'ground':
-                file_name_col = df.image_fname.apply(lambda x: os.path.splitext(x)[0])
+                # file_name_col = df.image_fname.apply(lambda x: os.path.splitext(x)[0]) # os.path.splitext分离扩展名
+                file_name_col = (os.path.splitext(os.path.basename(json_file))[0]).split('_Buildings')[0]
             elif population == 'proposal':
                 file_name_col = os.path.splitext(os.path.basename(json_file))[0]
             else:

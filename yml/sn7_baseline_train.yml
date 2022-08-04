@@ -20,11 +20,11 @@ data_specs:
   label_type: mask
   is_categorical: false
   mask_channels: 1
-  val_holdout_frac: 0.1
+  val_holdout_frac:
   data_workers:
 
 training_data_csv: '/home/liuxiangyu/dataset/spacenet7/csvs/sn7_baseline_train_df.csv'
-validation_data_csv:
+validation_data_csv: '/home/liuxiangyu/dataset/spacenet7/csvs/sn7_baseline_val_df.csv'
 inference_data_csv:
 
 training_augmentation:
