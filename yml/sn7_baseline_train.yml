@@ -1,4 +1,4 @@
-model_name: xdxd_spacenet4
+model_name: hrnet
 
 model_path:
 train: true

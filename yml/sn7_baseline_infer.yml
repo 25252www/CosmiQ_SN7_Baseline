@@ -1,10 +1,10 @@
-model_name: xdxd_spacenet4
+model_name: hrnet
 
 model_path: '/home/liuxiangyu/CosmiQ_SN7_Baseline/models/sn7_baseline/xdxd_final.pth'
 train: false
 infer: true
 
-pretrained: true
+pretrained: false
 nn_framework: torch
 batch_size: 6
 
